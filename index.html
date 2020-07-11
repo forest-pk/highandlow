@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylesheet.css">
+<title>hi&low</title>
+
+<script type="text/javascript">
+//1から13までのカードをcardに代入
+var card = ['image/card1.jpg','image/card2.jpg','image/card3.jpg',
+            'image/card4.jpg','image/card5.jpg','image/card6.jpg',
+            'image/card7.jpg','image/card8.jpg','image/card9.jpg',
+            'image/card10.jpg','image/card11.jpg',
+            'image/card12.jpg','image/card13.jpg'];
+            //敵と味方のカードをランダムに表示するための乱数設定
+            var random = Math.floor(Math.random()*12);
+            var Mycard = Math.floor(Math.random()*12);
+  //挑戦ボタンを押した結果
+  function click1(){
+    //挑戦ボタンを消去、high.lowボタンの設置
+    document.getElementById("start").style.display = "none";
+    document.getElementById("select1").style.display = "inline-block";
+    document.getElementById("select2").style.display = "inline-block";
+var random = Math.floor(Math.random()*12);
+    console.log(random);
+    //カードをランダムに表示
+    if (random === 0){
+      document.area1.src=card[0];
+    }
+    if (random === 1){
+      document.area1.src=card[1];
+    }
+    if (random === 2){
+      document.area1.src=card[2];
+    }
+    if (random === 3){
+      document.area1.src=card[3];
+    }
+    if (random === 4){
+      document.area1.src=card[4];
+    }
+    if (random === 5){
+      document.area1.src=card[5];
+    }
+    if (random === 6){
+      document.area1.src=card[6];
+    }
+    if (random === 7){
+      document.area1.src=card[7];
+    }
+    if (random === 8){
+      document.area1.src=card[8];
+    }
+    if (random === 9){
+      document.area1.src=card[9];
+    }
+    if (random === 10){
+      document.area1.src=card[10];
+    }
+    if (random === 11){
+      document.area1.src=card[11];
+    }
+    if (random === 12){
+      document.area1.src=card[12];
+    }
+        }
+
+    //highボタンを押した際のアクション
+    function high(){
+      var random = Math.floor(Math.random()*12);
+      var Mycard = Math.floor(Math.random()*12);
+      //high.lowボタンの消去、再挑戦ボタンの設置
+      document.getElementById("select1").style.display = "none";
+      document.getElementById("select2").style.display = "none";
+      document.getElementById("reset").style.display = "inline-block";
+      if (Mycard === 0){
+        document.area2.src=card[0];
+      }
+      if (Mycard === 1){
+        document.area2.src=card[1];
+      }
+      if (Mycard === 2){
+        document.area2.src=card[2];
+      }
+      if (Mycard === 3){
+        document.area2.src=card[3];
+      }
+      if (Mycard === 4){
+        document.area2.src=card[4];
+      }
+      if (Mycard === 5){
+        document.area2.src=card[5];
+      }
+      if (Mycard === 6){
+        document.area2.src=card[6];
+      }
+      if (Mycard === 7){
+        document.area2.src=card[7];
+      }
+      if (Mycard === 8){
+        document.area2.src=card[8];
+      }
+      if (Mycard === 9){
+        document.area2.src=card[9];
+      }
+      if (Mycard === 10){
+        document.area2.src=card[10];
+      }
+      if (Mycard === 11){
+        document.area2.src=card[11];
+      }
+      if (Mycard === 12){
+        document.area2.src=card[12];
+      }
+      //結果を表示
+      if (Mycard < random){
+        alert('あなたの負け');
+      }else if(Mycard > random){
+        alert('あなたの勝ち');
+      }else{
+        alert('引き分け');
+      }
+    }
+
+    //lowボタンを押した際のアクション
+    function low(){
+      var random = Math.floor(Math.random()*12);
+      var Mycard = Math.floor(Math.random()*12);
+      //high.lowボタンの消去、再挑戦ボタンの設置
+      document.getElementById("select1").style.display = "none";
+      document.getElementById("select2").style.display = "none";
+      document.getElementById("reset").style.display = "inline-block";
+      if (Mycard === 0){
+        document.area2.src=card[0];
+      }
+      if (Mycard === 1){
+        document.area2.src=card[1];
+      }
+      if (Mycard === 2){
+        document.area2.src=card[2];
+      }
+      if (Mycard === 3){
+        document.area2.src=card[3];
+      }
+      if (Mycard === 4){
+        document.area2.src=card[4];
+      }
+      if (Mycard === 5){
+        document.area2.src=card[5];
+      }
+      if (Mycard === 6){
+        document.area2.src=card[6];
+      }
+      if (Mycard === 7){
+        document.area2.src=card[7];
+      }
+      if (Mycard === 8){
+        document.area2.src=card[8];
+      }
+      if (Mycard === 9){
+        document.area2.src=card[9];
+      }
+      if (Mycard === 10){
+        document.area2.src=card[10];
+      }
+      if (Mycard === 11){
+        document.area2.src=card[11];
+      }
+      if (Mycard === 12){
+        document.area2.src=card[12];
+      }
+      //結果を表示
+      if (Mycard > random){
+        alert('あなたの負け');
+      }else if(Mycard < random){
+        alert('あなたの勝ち');
+      }else{
+        alert('引き分け');
+      }
+    }
+    function reset_button(){
+      //初期画面をリロード
+      document.getElementById("reset").style.display = "none";
+      document.getElementById("start").style.display = "inline-block";
+      document.area1.src="image/card_blue.jpg";
+      document.area2.src="image/card_red.jpg";
+
+    }
+</script>
+
+</head>
+<body>
+  <div class="title">
+    <h1>High & Low</h1>
+  </div>
+  <!--相手のカードと自分のカード表示部分-->
+  <div class="card_image">
+    <img class="enemy_card" src="image/card_blue.jpg" name="area1">
+    <img class="me_card" src="image/card_red.jpg" name="area2">
+  </div>
+  <!--ゲームをスタートさせるボタン-->
+  <div class="start_btn">
+    <input type="button"　name="挑戦" value="挑戦" onClick="click1()" id="start"/>
+  </div>
+  <!--highかlowかを選択-->
+  <div class="select_button">
+    <input type="button" name="高い" value="High" onClick="high()" id="select1"/>
+    <input type="button" name="低い" value="Low" onClick="low()" id="select2"/>
+  </div>
+  <!--初期画面表示用のボタン-->
+  <div class="reset_button">
+    <input type="button" name="再挑戦" value="再挑戦" onClick="reset_button()" id="reset"/>
+  </div>
+</body>
+</html>

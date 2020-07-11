@@ -1,0 +1,40 @@
+.enemy_card,.me_card {
+  height: 300px;
+  width:300px;
+  margin-bottom: 30px;
+}
+
+.enemy_card {
+  margin-right: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card_image {
+  text-align: center;
+}
+
+.start_btn {
+  text-align:center;
+}
+
+.select_button {
+
+  display:flex;
+  width:100%;
+  justify-content: space-around;
+}
+
+#select1,#select2{
+    display:none;
+}
+
+.reset_button {
+  text-align:center;
+}
+
+#reset {
+  display:none;
+}
